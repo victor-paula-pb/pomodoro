@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../assets/fonts/JosefinSans-Bold.ttf");
+}
+body {
+  font-family: "JosefinSans";
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.splash {
+  position: absolute;
+  background-color: #FF5E63;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.splash__logo-container {
+  flex-grow: 3;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.splash__logo {
+  width: 12rem;
+}
+.splash__loading-container {
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.splash__loading {
+  width: 4rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 98vh;
+}
+.container__header {
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 0 2rem 0;
+}
+.container__header img {
+  align-self: center;
+}
+.container__text {
+  padding: 1rem 0;
+}
+.container__text p {
+  text-align: center;
+  font-size: 2.25rem;
+  padding: 0 2.5rem;
+  line-height: 1.1;
+}
+.container__status {
+  padding: 2.4rem 0 2.4rem 0;
+}
+.container__status img:not(:first-child) {
+  margin-left: 0.2rem;
+}
+.container__footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  padding-bottom: 3.5rem;
+}
+.container__button {
+  background-color: #FF5E63;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  padding: 1.3rem 0;
+  border-radius: 2rem;
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

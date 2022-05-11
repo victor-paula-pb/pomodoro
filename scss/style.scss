@@ -1,3 +1,100 @@
 $primary: #FF5E63;
 $secondary: #36454f;
 $light: #FFFFFF;
+$background: red;
+@mixin flex($property, $parameter) {
+    display: flex;
+    #{$property}: $parameter;
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url("../assets/fonts/JosefinSans-Bold.ttf");
+}
+
+body {
+    font-family: 'JosefinSans';
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+.splash {
+    position: absolute;
+    background-color: $primary;
+    width: 100vw;
+    height: 100vh;
+    @include flex(align-items,
+    center);
+    flex-direction: column;
+    &__logo-container {
+        flex-grow: 3;
+        @include flex(justify-content,
+        flex-end);
+        flex-direction: column;
+    }
+    &__logo {
+        width: 12rem;
+    }
+    &__loading-container {
+        flex-grow: 3;
+        @include flex(justify-content,
+        center);
+        flex-direction: column;
+    }
+    &__loading {
+        width: 4rem;
+    }
+}
+
+.container {
+    @include flex(justify-content,
+    center);
+    flex-direction: column;
+    align-items: center;
+    height: 98vh;
+    &__header {
+        @include flex(align-items,
+        flex-end);
+        padding: 2rem 0 2rem 0;
+        img {
+            align-self: center;
+        }
+    }
+    &__img {}
+    &__text {
+        padding: 1rem 0;
+        p {
+            text-align: center;
+            font-size: 2.25rem;
+            padding: 0 2.5rem;
+            line-height: 1.1;
+        }
+    }
+    &__status {
+        // flex-grow: ;
+        padding: 2.4rem 0 2.4rem 0;
+        img:not(:first-child) {
+            margin-left: 0.2rem;
+        }
+    }
+    &__footer {
+        @include flex(align-items,
+        center);
+        flex-direction: column;
+        width: 85%;
+        padding-bottom: 3.5rem;
+    }
+    &__button {
+        background-color: $primary;
+        text-decoration: none;
+        color: $light;
+        text-align: center;
+        width: 100%;
+        padding: 1.3rem 0;
+        border-radius: 2rem;
+        flex-grow: 1;
+    }
+}
